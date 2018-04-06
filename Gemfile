@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gem 'listen'
+gem 'rerun'
+gem 'tty-prompt'
+gem 'twitter'
+gem 'json'
+gem 'pp'
+gem 'unirest'

@@ -1,0 +1,46 @@
+- Use the Twitter API to send encrypted tweets and non encrypted DMs - This is fairly done 
+- Use TTY to manage everything
+- JSON File full of Group Name : Keys
+- Delete people from groups 
+- Add people to groups
+- Previous two done ideally via user name 
+- When you add someone to a group, it DMs them the key 
+- When you delete someone from a group, it generates a new key and DMs the others in the group the new key
+- Groups can be an array of user names with the first entry being the key and then the names, name of the group is
+    the hash key - may do first entry is public key and second entry is private key 
+- Get Tweet ID and decrypt it 
+- Use OpenSSL to generate keys?
+- Public and Private Key system?
+
+
+
+
+- Flow ->
+    Ask User what operation they'd like to perform ->
+        Generate Key 
+        Add User to Group - Takes User and Group, sends Group Key to the User 
+        Delete User from Group - Removes User from Group, creates new Group Key and sends to all other Users
+        Send Encrypted Direct Message - Takes in DM Text and Group Name and sends using key from that Group 
+        Send Encrypted Tweet - Takes in Tweet Text and Group Name and sends using key from that Group 
+        Create Group - Takes Group Name and generates Keys, stores in first part of array
+        Delete Group - Deletes everything in the group 
+    Make Changes as Needed
+    Repeat
+
+
+    Will also need a decryption app that can take in text and a key and spit out the right answer
+    or else a decryption option that can decrypt using a given key 
+
+- How do we store our group data? ->
+    Store in a file, possibly JSON
+
+
+
+- u: leonsinclair97@gmail.com
+- p: letmein123
+- h: @encryptweeto
+
+
+- u: anicecoldbear@gmail.com
+- p: teacher1
+- h: @anicecoldbear
